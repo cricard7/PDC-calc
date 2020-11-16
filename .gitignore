@@ -1,0 +1,28 @@
+.DS_Store
+node_modules
+/dist
+
+# local env files
+.env.local
+.env.*.local
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Databases
+DE1_0_2008_to_2010_Prescription_Drug_Events_Sample_1.csv
+CMSDeSynPUF.db
+rx.db
+RxEvent2008_to_2010.csv
