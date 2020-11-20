@@ -17,27 +17,37 @@ pass in options object containing:
 
 const options = {
   dbpath: path.join(__dirname,'rx.db'),
-  tableName: 'DE1_0_2008_to_2010_Prescription_Drug_Events_Sample_1',
+  tableName: 'sampleData',
   ptIDCol: 'DESYNPUF_ID',
   serviceDtCol: 'SRVC_DT',
-  prodIDCol: 'PROD_SRVC_ID',
+  prodIDCol: 'NDC',
   daySupplyCol: 'DAYS_SUPLY_NUM',
-  ptID: '9D7984F817FF6825'
+  ptID: '664000000000000'
 }
 
 
 async function test(){
 
   var data = await getPtByID(options)
-  console.log(data.length)
+  console.log(data)
 }
 
 test()
 
+/*
+Example data
+DESYNPUF_ID	     SRVC_DT	NDC	          DAYS_SUPLY_NUM
+664000000000000	20080116	57664-568-13	7
+664000000000000	20080125	57664-568-13	7
+664000000000000	20080201	57664-568-13	30
+664000000000000	20080228	57664-568-13	7
+664000000000000	20080415	57664-568-13	7
 
-
-
-
+Period lasting 91 days
+Following dates are not covered:
+Jan 23,24, Feb 1, Mar 10, Mar 11, Mar 12, Mar 13, Mar 14 (8 days total)
+PDC = (91-8) / 91 = 0.912 = 91%
+*/
 
 
 

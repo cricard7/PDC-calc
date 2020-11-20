@@ -24,5 +24,4 @@ pnpm-debug.log*
 # Databases
 DE1_0_2008_to_2010_Prescription_Drug_Events_Sample_1.csv
 CMSDeSynPUF.db
-rx.db
 RxEvent2008_to_2010.csv
